@@ -39,8 +39,8 @@ mvn clean compile quarkus:dev
 # 2. Url to test the app
 http://localhost:8080/hello
 
-#3 quarkus-karate QuarkusTest command
+#3. quarkus-karate QuarkusTest command
 mvn clean compile verify quarkus:dev 
 
-#4 quarkus-karateKarateTest command
+#4. quarkus-karateKarateTest command
 mvn clean compile verify -DargLine="-Dkarate.env=dev" -Dtest=KarateTestRunner quarkus:dev
