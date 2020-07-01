@@ -1,12 +1,17 @@
 package org.quarkus.karate;
 
-//import io.quarkus.test.junit.QuarkusTest;
-import com.intuit.karate.junit4.Karate;
-import com.intuit.karate.KarateOptions;
-import org.junit.runner.RunWith;
+import io.quarkus.test.junit.QuarkusTest;
+import com.intuit.karate.junit5.Karate;
+//import com.intuit.karate.KarateOptions;
 
-@RunWith(Karate.class)
-@KarateOptions(features = "src/test/resources")
+@QuarkusTest
+//@KarateOptions(features = "src/test/resources")
 public class KarateTestRunner {
+	
+	 @Karate.Test
+	    Karate testFullPath() {
+	        //return Karate.run("classpath:karate/tags.feature").tags("@first");
+		 return Karate.run("src/test/resources/feature");
+	    }
 
 }
